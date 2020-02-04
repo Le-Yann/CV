@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div>
+    <div id="perso">
       <hcard id="contact" :item="personnes[0]" />
       <collection
         id="loisirs"
@@ -115,7 +115,7 @@ export default {
   font-family: verdana, arial, sans-serif;
   padding: 1em;
 }
-#contact {
+#perso {
   position: sticky;
   top: 1em;
 }
