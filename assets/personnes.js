@@ -28,7 +28,7 @@ let personnes = [
       "Lecture",
       "Jeux de société"
     ],
-    "photo" : "/images/yann_perrin.jpg"
+    "photo" : "images/yann_perrin.jpg"
   }
 ];
 export {personnes};

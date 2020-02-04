@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="h-card">
-    <img v-if="item.photo" :src="'~'+item.photo" class="u-photo" alt="" />
+    <img v-if="item.photo" :src="item.photo" class="u-photo" alt="" />
     <p class="p-name">{{item.prenom}} {{item.nom}}</p>
     <p v-if="item.adresse" class="p-adr h-adr">
       <span class="p-street-address">{{item.adresse.numero}}, {{item.adresse.voie}}</span>
