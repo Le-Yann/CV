@@ -1,5 +1,11 @@
+// ajouter seulement `router.base = '/<nom-du-depot>/'` si `DEPLOY_ENV` est `GH_PAGES`
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/CV/'
+  }
+} : {}
 export default {
-  mode: 'universal',
+  mode: 'spa',
   /*
    ** Headers of the page
    */
@@ -56,5 +62,6 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  }
+  },
+  ...routerBase
 }
