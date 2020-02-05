@@ -3,14 +3,17 @@
     <h2 v-if="label" v-html="label"></h2>
     <div :is="listType">
       <template v-for="(item,index) in collection">
-        <slot :item="item" :index="index"><span  v-html="linkify(item)"></span><span v-if="index != collection.length - 1">, </span></slot>
+        <slot :item="item" :index="index">
+          <a v-if="item.hasOwnProperty('url')" :href="item.url" :title="item.description" target="_blank" class="external">{{item.libelle}}</a>
+          <nuxt-link v-else-if="item.hasOwnProperty('to')" :to="item.to">{{item.libelle}}</nuxt-link>
+          <template v-else>{{item}}</template><template v-if="index != collection.length - 1">, </template>
+        </slot>
       </template>
     </div>
   </div>
 </template>
 
 <script>
-import _ from 'lodash'
 export default {
   props:{
     'id': {
@@ -31,13 +34,6 @@ export default {
     }
   },
   methods: {
-    linkify(item) {
-      return _.isObject(item) && _.has(item,'url') ? '<a href="'+item.url+'" title="'+item.description+'">'+item.libelle+'</a>' : item
-    },
-    listing(items) {
-      items = _.map(items,(i) => this.linkify(i))
-      return _.join(items,', ')
-    }
   }
 }
 

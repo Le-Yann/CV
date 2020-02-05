@@ -13,7 +13,7 @@ export default {
       {
         "libelle" : "Mon Curriculum Vitae",
         "description" : "la version originale de ce document",
-        "url" : ""
+        "to" : "/"
       },
       {
         "libelle" : "La Dame à la Licorne",
