@@ -42,10 +42,20 @@
         label="Experience Professionnelle"
         list-type="dl"
       >
-        <template slot-scope="{ item }">
+        <template slot-scope="{ item,index }">
           <dt>{{ item.debut }} à {{ item.fin }}</dt>
           <dd>
             <strong>{{ item.nom }}</strong> - {{ item.lieu }}
+            <collection
+              v-if="item.resume"
+              :id="'resume'+index"
+              :collection="item.resume"
+              list-type="ul"
+            >
+              <template slot-scope="{item}">
+                <li>{{item}}</li>
+              </template>
+            </collection>
           </dd>
         </template>
       </collection>
@@ -106,14 +116,19 @@ export default {
 </script>
 
 <style>
+body {
+  margin:0;
+  font-family:verdana,arial,sans-serif;
+  font-size:0.8em;
+  color:#000;
+}
 .container {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  font-family: verdana, arial, sans-serif;
-  padding: 1em;
+  padding: 0 1em 1em;
 }
 #perso {
   position: sticky;
@@ -123,6 +138,7 @@ export default {
   padding: 0 2em;
 }
 dl {
+  margin: 0.6em;
   display: flex;
   flex-wrap: wrap;
 }
@@ -133,16 +149,28 @@ dt {
 dd {
   flex: 1 1 85%;
   text-align: left;
+  margin-bottom: 0.5em;
 }
 .diplome {
   font-style: italic;
   font-weight: bold;
 }
+h1 {
+  margin-top:0;
+  text-align:center;
+  font-family:'century gothic gras italique',verdana,arial,sans-serif;
+  background-color:hsl(39,73%,88%);
+  color:hsl(240,100%,13%);
+}
 h2 {
-  padding-top: 0;
+  position: sticky;
+  top: 0;
+  padding-top: 0.5em;
   margin-top: 0;
   border-bottom: 3px double hsl(39, 73%, 80%);
   background: #fff;
   color: hsl(240, 100%, 13%);
 }
+ul { margin-top: 0.3em; }
+ul li { margin-left:-2em; }
 </style>
