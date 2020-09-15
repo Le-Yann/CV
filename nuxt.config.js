@@ -1,4 +1,5 @@
 // ajouter seulement `router.base = '/<nom-du-depot>/'` si `DEPLOY_ENV` est `GH_PAGES`
+import {entreprises} from "./assets/entreprises.js"
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
     base: '/CV/'
@@ -63,5 +64,11 @@ export default {
      */
     extend(config, ctx) {}
   },
-  ...routerBase
+  ...routerBase,
+  generate: {
+    routes(callback) {
+      const routes = entreprises.map(e=>'/entreprise/'+e.nom);
+      callback(null, routes);
+    }
+  }
 }
