@@ -67,7 +67,7 @@ export default {
   ...routerBase,
   generate: {
     routes(callback) {
-      const routes = entreprises.map(e=>'/entreprise/'+e.nom);
+      const routes = entreprises.map(e=>'/entreprises/'+e.nom);
       callback(null, routes);
     }
   }
