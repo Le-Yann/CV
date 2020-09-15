@@ -1,4 +1,4 @@
-export default {
+const competences = {
   "Systèmes" : {
     "display" : "inline",
     "contenu" : [
@@ -24,28 +24,49 @@ export default {
   "Internet" : {
     "display" : "inline",
     "contenu" : [
-      "Apache",
       "PHP",
-      "MySQL",
-      "PostgreSQL",
       "XHTML",
       "CSS",
       "Javascript",
       "WSDL",
       "SOAP",
-      "MongoDB",
-      "Express.js",
-      "Angular.js",
-      "Node.js"
     ]
   },
-  "Bureautique" : {
+  "Serveurs" : {
     "display" : "inline",
     "contenu" : [
-      "Word",
-      "Excel",
-      "Publisher",
-      "OpenOffice.org"
+      "Apache",
+      "Nginx",
+      "Node.js",
+      "Express.js",
+    ]
+  },
+  "Bases de données" : {
+    "display" : "inline",
+    "contenu" : [
+      "MySQL",
+      "MS-SQL",
+      "PostgreSQL",
+      "MongoDB"
+    ]
+  },
+  "ORM" : {
+    "display" : "inline",
+    "contenu" : [
+      "Doctrine",
+      "Sequelize"
+    ]
+  },
+  "Frameworks" : {
+    "display" : "inline",
+    "contenu" : [
+      "Vue.js",
+      "NuxtJS",
+      "Angular.js",
+      "Symfony",
+      "Api-platform",
+      "Laravel",
+      "Lumen"
     ]
   },
   "Graphisme" : {
@@ -65,3 +86,4 @@ export default {
     ]
   }
 };
+export {competences};

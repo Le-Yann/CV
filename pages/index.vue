@@ -45,7 +45,7 @@
         <template slot-scope="{ item,index }">
           <dt>{{ item.debut }} à {{ item.fin }}</dt>
           <dd>
-            <strong>{{ item.nom }}</strong> - {{ item.lieu }}
+            <strong>{{ item.nom }}</strong> - <nuxt-link :to="'/entreprises/'+item.entreprise" class="internal">{{ item.entreprise }}</nuxt-link>
             <collection
               v-if="item.resume"
               :id="'resume'+index"
@@ -80,34 +80,29 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex'
 import _ from 'lodash'
 import Hcard from '~/components/Hcard.vue'
 import Collection from '~/components/Collection.vue'
-import { personnes } from '~/assets/personnes.js'
-import realisations from '~/assets/realisations.js'
-import competences from '~/assets/competences.js'
-import { experiences } from '~/assets/experiences.js'
-import { formations } from '~/assets/formations.js'
-import { loisirs } from '~/assets/loisirs.js'
 
 export default {
   components: {
     Hcard,
     Collection
   },
-  asyncData({ params }) {
-    return {
-      personnes,
-      realisations,
-      competences,
-      experiences: _.orderBy(
-        experiences,
-        (item) => new Date(item.debut),
-        'desc'
-      ),
-      formations: _.orderBy(formations, (item) => new Date(item.debut), 'desc'),
-      loisirs
-    }
+  computed:{
+    ...mapState({
+      personnes:'personnes',
+      realisations:'realisations',
+      competences:'competences',
+      loisirs:'loisirs'
+    }),
+    experiences() { return this.olderToYounger('experiences') },
+    formations() { return this.olderToYounger('formations') },
+
+    ...mapGetters([
+      'olderToYounger'
+    ])
   },
   methods: {
     isObject: (item) => _.isObject(item)
@@ -173,4 +168,7 @@ h2 {
 }
 ul { margin-top: 0.3em; }
 ul li { margin-left:-2em; }
+.internal {
+  text-decoration: none;
+}
 </style>

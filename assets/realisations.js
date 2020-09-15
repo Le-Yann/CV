@@ -1,4 +1,4 @@
-export default {
+const realisations = {
   "Logiciels" : {
     "contenu" : [
       {
@@ -32,4 +32,5 @@ export default {
       "Plaquettes du Forum, Association du Quartier de la Madeleine - Ed. 2004-2005-2006"
     ]
   }
-}
+};
+export {realisations};
