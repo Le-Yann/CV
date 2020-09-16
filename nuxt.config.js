@@ -22,7 +22,7 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: inconBase+'/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: iconBase+'/favicon.ico' }]
   },
   /*
    ** Customize the progress-bar color
