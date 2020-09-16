@@ -5,6 +5,7 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
     base: '/CV/'
   }
 } : {}
+const iconBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/CV' : '';
 export default {
   mode: 'spa',
   /*
@@ -21,7 +22,7 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: inconBase+'/favicon.ico' }]
   },
   /*
    ** Customize the progress-bar color
