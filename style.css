@@ -1,0 +1,336 @@
+/* --- Reset & Variables globales --- */
+*,
+::after,
+::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--primary-color: #000042;
+	--accent-bg: #f7e7ca;
+	--border-color: #e1c797;
+	--text-color: #1a1a1a;
+	--body-bg: #ffffff;
+	--font-stack: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html {
+	font-family: var(--font-stack);
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--text-color);
+	background-color: var(--body-bg);
+}
+
+body {
+	min-height: 100vh;
+}
+
+/* --- Layout Principal (Mobile First) --- */
+.container {
+	width: 100%;
+	max-width: 1350px;
+	margin: 0 auto;
+	padding: 1.5em;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+			"id"
+			"experience"
+			"formation"
+			"projets"
+			"loisirs";
+	gap: 0.5em 4em;
+}
+
+/* --- Sidebar & Carte de visite --- */
+
+header {
+	grid-area: id;
+}
+
+.h-card {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5em;
+}
+
+#contact {
+	text-align: center;
+	padding: 0.5em;
+	background-color: #fcf8f2;
+	border-radius: 8px;
+}
+
+#contact img {
+	height: auto;
+	border-radius: 15% 0 0 0;
+	margin-bottom: 0.5em;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+	font-size: 1.8rem;
+	color: var(--primary-color);
+	background-color: var(--accent-bg);
+	padding: 0.3em;
+	border-radius: 4px;
+}
+
+#contact h1 {
+	margin-bottom: 0.3em;
+}
+
+#contact p {
+	font-size: 0.95rem;
+	margin-bottom: 0.5em;
+}
+
+/* --- Contenu Principal --- */
+
+/*
+#main-content {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5em;
+}
+*/
+
+h2 {
+	color: var(--primary-color);
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background: var(--body-bg);
+	padding: 0.3em 0 0.2em;
+	margin-bottom: 0.5em;
+	border-bottom: 3px double var(--border-color);
+}
+
+/* --- Listes de définitions (Formations) --- */
+#formations {
+	grid-area: formation;
+}
+
+dl {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0.6em;
+}
+
+dt {
+	font-weight: 700;
+	color: var(--primary-color);
+}
+
+dd {
+	margin-bottom: 0.5em;
+	padding-left: 0.5em;
+}
+
+#projets {
+	grid-area: projets;
+}
+
+#projets p,
+#projets a {
+	text-align: justify;
+}
+
+
+#loisirs {
+	grid-area: loisirs;
+}
+
+/* --- Articles (Expériences) --- */
+#experiences {
+	grid-area: experience;
+}
+
+.experience-item {
+	margin-bottom: 0.8em;
+}
+
+.experience-item header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-bottom: 0.5em;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 0.2em;
+}
+
+.experience-item h3 {
+	flex: 0 0 220px;
+	font-size: 1.1rem;
+	color: var(--text-color);
+}
+
+.experience-item .entreprise {
+	font-weight: 600;
+}
+
+.experience-item .date {
+	font-style: italic;
+	color: #555;
+}
+
+/* --- Listes à puces --- */
+ul {
+	list-style-type: square;
+	margin-left: 1.2em;
+	margin-top: 0.5em;
+}
+
+ul li {
+	margin-bottom: 0.4em;
+	padding-left: 0.3em;
+}
+
+/* --- Typographie & Liens --- */
+.diplome {
+	font-style: italic;
+	font-weight: 700;
+}
+
+.internal,
+.external,
+.entreprise::after {
+	text-decoration: none;
+	color: #0066cc;
+	transition: color 0.2s ease;
+}
+
+.internal:hover,
+.external:hover {
+	text-decoration: underline;
+	color: var(--primary-color);
+}
+
+/* --- Media Queries : Passage en mode Desktop --- */
+@media (min-width: 768px) {
+	.container {
+		grid-template-columns: 450px 1fr;
+		grid-template-areas:
+			"id experience"
+			"formation experience"
+			"projets experience"
+			"loisirs experience";
+		align-items: flex-start;
+		padding: 2em;
+	}
+
+	/* Rendu en colonnes alignées pour les compétences/formations sur écran large */
+	dl {
+		grid-template-columns: max-content 1fr;
+		gap: 0.5em 0;
+	}
+
+	dt {
+		border-right: 2px solid var(--border-color);
+		padding-right: 1em;
+	}
+
+	dd {
+		padding-left: 1em;
+	}
+}
+
+/* --- Stack technique --- */
+.stack {
+	font-weight: bold;
+	font-size: 0.8em;
+	word-break: keep-all;
+}
+
+/* --- SPA --- */
+article aside {
+	display: none;
+	z-index: 20;
+}
+
+article aside:target {
+	display: block;
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	background-color: hsla(0, 0%, 0%, 0.6);
+	width: 100%;
+	height: 100%;
+}
+
+article aside:target>a {
+	display: block;
+	text-decoration: none;
+	color: var(--text-color);
+	width: 100%;
+	height: 100%;
+}
+
+article aside:target>a div {
+	position: relative;
+	top: 10%;
+	left: 20%;
+	width: 60%;
+	height: 80%;
+	background-color: var(--body-bg);
+	padding: 2em;
+	text-align: justify;
+}
+
+/* --- impression --- */
+@media print {
+	html {
+		font-size: 10pt;
+		line-height: 1.25;
+	}
+
+	body {
+		padding: 0.5cm 1cm;
+	}
+
+	.container {
+		padding: 0;
+		grid-template-columns: 350px 1fr;
+	}
+
+	#contact {
+		padding: 0.5em;
+	}
+
+	#contact img {
+		max-width: 100px;
+	}
+
+	h2 {
+		position: static;
+		z-index: auto;
+	}
+
+	dt,
+	dd {
+		font-size: 8pt;
+	}
+
+	#projets p,
+	#projets a,
+	#loisirs p {
+		font-size: 8pt;
+	}
+
+	.internal {
+		display: none;
+	}
+
+	.entreprise::after {
+		content: attr(data-nom)
+	}
+}
+
+@page {
+	size: landscape;
+	margin: 0cm;
+}

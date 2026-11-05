@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Yann Perrin - Curriculum Vitae</title>
+	<meta name="description" content="Mon Curriculum Vitae">
+	<meta name="author" content="Yann Perrin">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<header>
+			<div class="h-card" id="contact">
+				<img src="images/yann_perrin_2026.png" alt="Yann Perrin" class="u-photo">
+				<div>
+					<h1 class="p-name">Yann Perrin</h1>
+					<p class="p-adr h-adr">
+						<span class="p-street-address">18, Rue du Docteur Martial
+							Taugourdeau</span><br>
+						<span class="p-postal-code">28630</span>
+						<span class="p-locality">Le Coudray</span> -
+						<span class="p-country-name">France</span>
+					</p>
+					<a class="p-tel external" href="tel:+33616941153">06.16.94.11.53</a><br>
+					<a class="u-email external"
+						href="mailto:yann.perrin@gmail.com">yann.perrin@gmail.com</a>
+				</div>
+			</div>
+			<h1>Développeur full stack senior</h1>
+		</header>
+
+		<section id="experiences" class="collection">
+			<h2>Expérience Professionnelle</h2>
+
+			<article class="experience-item">
+				<header>
+					<h3>Développeur</h3>
+					<span class="entreprise" data-nom="Qualiconsult"><a href="#qualiconsult"
+							class="internal">Qualiconsult</a></span>
+					<span class="date">2016 à 2026</span>
+				</header>
+				<aside id="qualiconsult">
+					<a href="#">
+						<div>
+							<h3>Qualiconsult</h3>
+							<p>Qualiconsult est un groupe international dont la
+								vocation est de s'assurer du respect des normes
+								au sein du patrimoine immobilier de ses clients,
+								lors de toutes les étapes de la vie de celui-ci,
+								de la construction à la démolition</p>
+							<p>J'ai rejoint la maison mère du groupe en 2016, en
+								tant que développeur web senior. Mon rôle était
+								alors de renforcer les équipes sur différents
+								projets au fil des besoins. Mon premier travail
+								a été de reprendre le code legacy de l'extranet
+								commercial (du PHP générant HTML,JS et CSS en
+								monofichiers) pour le faire évoluer vers une
+								structure MVC.
+							</p>
+							<p>J'ai ensuite créé en collaboration directe avec le
+								directeur du service formation, un outil de
+								demande de formation pour mes collègues prenant
+								en compte les prérequis obligatoires et leurs
+								formations actuelles, sous forme de SPA.</p>
+							<p>Mon troisième projet a été la création d'une
+								bibliothèque de CV et de références permettant
+								la création de books normés pour répondre aux
+								appels d'offres, y compris pour des marchés
+								publics.</p>
+							<p>En parallèle avec le précédent projet, j'ai été amené
+								à participer à de la reprise de données depuis
+								des bases MS-SQL vers Excel, en vue d'une
+								migration des applications de la société vers
+								SAP HANA. J'ai à cette occasion créé un outil
+								CLI en node utilisant feather.js pour extraire
+								les données et le formater selon les règles de
+								gestion fournies. J'ai ce faisant permis au
+								groupe d'économiser trois semaines de travail
+								manuel.</p>
+						</div>
+					</a>
+				</aside>
+				<ul>
+					<li>Créer, développer et maintenir des outils intranet spécialisés
+						<ul>
+							<li>l'un dans la génération de documents utiles lors de
+								la réponse à des appels d'offres, y compris pour
+								des marchés publics réglementés <span
+									class="stack">- OAuth + Symfony + API
+									Platform + MS-SQL + NuxtJS</span>
+							</li>
+							<li>l'autre dans le domaine de la formation
+								professionnelle <span class="stack">- MS-SQL
+									+ Lumen + jQuery</span></li>
+						</ul>
+					</li>
+					<li>Réaliser un outil en ligne de commande permettant la reprise et le
+						transfert de données depuis des bases MS-SQL vers Excel
+						<span class="stack">- Node.js + FeatherJS + MS-SQL</span>
+					</li>
+					<li>Participer à l'évolution de l'extranet commercial de la société
+						depuis du code legacy monofichier (PHP générant HTML, CSS et JS)
+						vers une architecture MVC <span class="stack">- Laravel + Doctrine
+							+ MS-SQL + Angular.js</span></li>
+					<li>Mettre en place et faire évoluer des environnements de développement
+						locaux sous différents systèmes d'exploitation <span
+							class="stack">- Windows, WSL, Linux, Apache, Nginx, GitLab
+							CI</span></li>
+				</ul>
+			</article>
+
+			<article class="experience-item">
+				<header>
+					<h3>Développeur</h3>
+					<span class="entreprise" data-nom="Connect Assistance"><a href="#connectassistance" class="internal">Connect
+							Assistance</a></span>
+					<span class="date">2008 à 2016</span>
+				</header>
+				<aside id="connectassistance">
+					<a href="#">
+						<div>
+							<h3>Connect Assistance</h3>
+							<p>Créée en 2007, Connect Assistance (2SIP) était une
+								filiale de SFR dont la vocation initiale était
+								de procéder à l'installation de box internet
+								chez les clients SFR.</p>
+							<p>J'ai rejoint la société quelques mois après sa
+								création, en tant que hotliner.</p>
+							<p>Les appels étant rares au début, j'ai mis à profit
+								le temps disponible pour créer les premiers
+								outils informatiques de la hotline sur la base
+								d'un ensemble de Tiddlywiki modifiés.</p>
+							<p>Cela m'a rapidement fait remarquer et j'ai rejoint le
+								seul développeur de la société au bout d'un an,
+								celui-ci prenant alors la position de DSI.</p>
+							<p>Mon premier projet officiel fut la mise en place de
+								l'intranet technique de la société, permettant
+								aux hotliners d'enregistrer les réponses données
+								aux appels des techniciens dans une base de
+								connaissance commune.</p>
+							<p>Il fut rapidement étendu aux téléprospecteurs et au
+								service client pour permettre d'enregistrer les
+								informations des appels clients et les
+								rendez-vous qui en découlaient pour nos
+								techniciens partenaires devenant ainsi un
+								extranet.</p>
+							<p>L'équipe de développement s'étoffant petit à petit,
+								je fus amené à former mes nouveaux collègues aux
+								technologies employées au sein du SI.</p>
+							<p>Puis arriva en 2010 l'un des plus gros projets sur
+								lesquels j'ai travaillé : l'E-rdv de SFR.
+								L'objectif était simple : faire tomber les délais
+								d'installation moyens d'une box d'un mois à 3
+								jours.</p>
+							<p>J'ai donc fait office de chef de projet d'une équipe
+								de 3 personnes sur ce projet colossal. Il nous a
+								fallu déterminer lesquels de nos 1300
+								techniciens partenaires étaient les plus proches
+								du lieu d'intervention, gérer une répartition
+								équitable des interventions ainsi que
+								l'optimisation de la tournée des techniciens en
+								tenant compte de leurs plannings professionnels,
+								le tout dans un temps suffisamment court pour
+								que le service client SFR puisse proposer des
+								créneaux optimisés durant l'appel du client.</p>
+						</div>
+					</a>
+				</aside>
+				<ul>
+					<li>Mettre au point des webservices permettant la communication en temps
+						réel avec nos clients selon des spécifications établies en
+						relation avec eux <span class="stack">- API REST +
+							websocket</span></li>
+					<li>Diriger une équipe de développement de 3 personnes depuis la phase
+						de création d'un projet jusqu'à sa livraison <span
+							class="stack">- PostgreSQL + Laravel + TPLN + jQuery + API
+							Google Maps</span></li>
+					<li>Former mes collègues aux outils employés au sein de la société <span
+							class="stack">- SQL + PHP + HTML + CSS + JavaScript</span>
+					</li>
+					<li>Faire évoluer l'extranet vers une architecture MVC afin de faciliter
+						la maintenance et le développement de nouvelles fonctionnalités
+						<span class="stack">- PostgreSQL + Laravel + TPLN + jQuery</span>
+					</li>
+					<li>Créer, développer et maintenir l'extranet technique de la société au
+						niveau national <span class="stack">- MySQL + PHP + jQuery</span>
+					</li>
+				</ul>
+			</article>
+
+			<article class="experience-item">
+				<header>
+					<h3>Hotliner</h3>
+					<span class="entreprise" data-nom="Connect Assistance"><a href="#connectassistance" class="internal">Connect
+							Assistance</a></span>
+					<span class="date">2007 à 2008</span>
+				</header>
+				<ul>
+					<li>Dépanner les techniciens partenaires par téléphone</li>
+					<li>Créer et mettre en place des outils informatiques de gestion
+						internes <span class="stack">- TiddlyWiki + SQLite</span></li>
+				</ul>
+			</article>
+
+			<article class="experience-item">
+				<header>
+					<h3>Animateur informatique</h3>
+					<span class="entreprise" data-nom="Mairie de Chartres"><a href="#mairie" class="internal">Mairie de
+							Chartres</a></span>
+					<span class="date">2000 à 2005</span>
+				</header>
+				<aside id="mairie">
+					<a href="#">
+						<div></div>
+					</a>
+				</aside>
+				<ul>
+					<li>Former les adhérents (enfants et adultes) et personnels du Forum de
+						la Madeleine</li>
+					<li>Entretenir, faire évoluer et mettre en réseau le parc informatique
+					</li>
+					<li>Créer des supports de communication (site de l'association La Dame à la
+						Licorne, plaquettes du Forum, Association du
+						Quartier de la Madeleine - Ed. 2004-2005-2006,…)</li>
+					<li>Intervenir auprès des classes de l’école primaire Jacques Prévert et
+						aider aux devoirs des collégiens (Mathématiques)</li>
+				</ul>
+			</article>
+		</section>
+		<section id="formations" class="collection">
+			<h2>Formations et <em>Diplômes</em></h2>
+			<dl>
+				<dt>Avril 2022</dt>
+				<dd><em class="diplome">Certification ITIL 4</em> - Orsys</dd>
+				<dt>2005</dt>
+				<dd>Stage création/reprise d'entreprise - CMA de Chartres</dd>
+				<dt>2003</dt>
+				<dd><em class="diplome">Technicien Internet Intranet</em> mention
+					"Très Bien" - CEFIM </dd>
+				<dt>2001 à 2003</dt>
+				<dd><em class="diplome">U.V. "mathématiques appliquées à l'informatique"</em> du
+					Diplôme de 1er Cycle Technique Informatique - CNAM</dd>
+				<dt>1996 à 1998</dt>
+				<dd>Niveau B.T.S. Action Commerciale - Lycée Rémi Belleau de Nogent le Rotrou
+				</dd>
+				<dt>1994 à 1996</dt>
+				<dd>Niveau 1ère année de D.E.U.G. M.I.A.S. - Université d'Orléans</dd>
+				<dt>Juin 1994</dt>
+				<dd><em class="diplome">Bac C</em> - Lycée Marceau de Chartres (28)</dd>
+			</dl>
+		</section>
+		<section id="projets" class="collection">
+			<h2>Projets</h2>
+			<a href="https://framakey.org/telecharger/applications-portables-libres"
+				title="C.A.F.E. - un logiciel nomade, intégré à la Framakey de Framasoft (s'ouvre dans un nouvel onglet)"
+				target="_blank" rel="noopener noreferrer" class="external">C.A.F.E. -
+				Associations Fichiers &lt;-&gt; Executables</a>
+			<p>logiciel open source dont la première version fut réalisée avec AutoHotkey, intégré à
+				la Framakey de l'association Framasoft. (plus d'un million de téléchargements)
+			</p>
+			<br>
+			<a href="https://boardgamegeek.com/boardgamedesigner/156056/yann-perrin" target="_blank"
+				rel="noopener noreferrer" class="external">Battlecrest, jeu de société</a>
+			<p>Depuis 2023, je travaille sur mon temps libre en freelance pour l'éditeur américain
+				Button Shy Games sur le jeu de société Battlecrest. J'ai conçu pour ce jeu 3
+				personnages complets (Griyan, Dowdran et Caera), le mode solo de 3 autres
+				personnages (Andmar, Kivani et Rin Mana) et le moteur du mode
+				solo de la troisième saison du jeu (Imperator III).</p>
+		</section>
+		<section id="loisirs" class="collection">
+			<h2>Loisirs</h2>
+			<p>Jeux de société, Lecture</p>
+		</section>
+	</div>
+
+</body>
+
+</html>
